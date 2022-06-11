@@ -1,11 +1,16 @@
 package za.ac.cput.util;
 
 import org.apache.commons.validator.routines.EmailValidator;
+import za.ac.cput.domain.Name;
 
 public class StudentHelper {
 
-    public static boolean isNull(String string){
+    public static boolean idIsNull(String string){
         return string == null || string.isEmpty() || string.equals(" "); //returns true
+    }
+
+    public static boolean nameIsNull(Name name){
+        return name == null;
     }
 
     public static boolean emailValid(String email){

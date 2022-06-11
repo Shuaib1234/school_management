@@ -7,10 +7,10 @@ import za.ac.cput.util.StudentHelper;
 public class StudentFactory {
 
     public static Student createStudent(String studentId, String email, Name name){
-       if(StudentHelper.isNull(studentId))
-           return null;
+       if(StudentHelper.idIsNull(studentId) || StudentHelper.nameIsNull(name))
+           throw new IllegalArgumentException("ID or Name is empty");
        if(!StudentHelper.emailValid(email))
-           return null;
+           throw new IllegalArgumentException("Invalid Email!");
 
        return new Student.Builder()
                .setStudentId(studentId)
