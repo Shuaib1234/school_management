@@ -19,7 +19,7 @@ public class Student {
     private String email;
     @NotNull
     private Name name;
-    
+
     protected Student(){
 
     }
