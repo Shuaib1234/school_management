@@ -1,3 +1,8 @@
+/* StudentFactory.java
+ Factory for the Student class
+ Author: Ali Mohamed (219113505)
+ Date: 11 June 2022
+*/
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Name;
