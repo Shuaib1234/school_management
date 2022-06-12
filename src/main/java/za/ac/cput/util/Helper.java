@@ -3,9 +3,9 @@ package za.ac.cput.util;
 import org.apache.commons.validator.routines.EmailValidator;
 import za.ac.cput.domain.Name;
 
-public class StudentHelper {
+public class Helper {
 
-    public static boolean idIsNull(String string){
+    public static boolean stringIsNull(String string){
         return string == null || string.isEmpty() || string.equals(" "); //returns true
     }
 
