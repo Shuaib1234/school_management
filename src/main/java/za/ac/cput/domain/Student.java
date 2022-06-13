@@ -6,6 +6,7 @@
 
 package za.ac.cput.domain;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
@@ -18,6 +19,7 @@ public class Student {
     @NotNull
     private String email;
     @NotNull
+    @Embedded
     private Name name;
 
     protected Student(){
