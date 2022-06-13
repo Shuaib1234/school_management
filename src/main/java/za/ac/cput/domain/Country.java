@@ -1,7 +1,7 @@
 /*
 Country.java
 Country entity
-Author: Demi Farquhar
+Author: Demi Farquhar (220322104)
 Date: 11 June 2022
  */
 package za.ac.cput.domain;
@@ -60,12 +60,12 @@ public class Country {
         private String id;
         private String name;
 
-        public Builder id(String id) {
+        public Builder setId(String id) {
             this.id = id;
             return this;
         }
 
-        public Builder name(String name) {
+        public Builder SetName(String name) {
             this.name = name;
             return this;
         }
