@@ -1,17 +1,21 @@
 /*
 Name.java
-Name entity
-Author: Demi Farquhar
+Author: Demi Farquhar (220322104)
 Date: 11 June 2022
  */
 package za.ac.cput.domain;
 
+import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
+@Embeddable
 public class Name {
-    private String firstName;
-    private String middleName;
-    private String lastName;
+  @NotNull
+  private String firstName;
+  private String middleName;
+  @NotNull
+  private String lastName;
 
     //constructor
     protected Name(){
@@ -62,17 +66,17 @@ public class Name {
         private String middleName;
         private String lastName;
 
-        public Builder firstName(String firstName) {
+        public Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder middleName(String middleName) {
+        public Builder setMiddleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder lastName(String lastName) {
+        public Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
