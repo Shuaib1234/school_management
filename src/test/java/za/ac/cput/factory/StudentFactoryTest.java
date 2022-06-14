@@ -14,8 +14,8 @@ import za.ac.cput.domain.Student;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentFactoryTest {
-    //TODO: Change name to factory creation
-    Name name = new Name();
+
+    Name name = NameFactory.createName("Ali", "", "Mohamed");
     private EmailValidator validator;
     String validEmail = "219113505@mycput.ac.za";
     String invalidEmail = "219113505@mycput.ac.z---a";
@@ -42,13 +42,23 @@ class StudentFactoryTest {
     }
     @Test
     void idNullException(){
-        assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent("", validEmail, name));
+        assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent(null, validEmail, name));
     }
 
     @Test
     void nameNullException(){
         assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent("1", validEmail, null) );
     }
+
+    @Test
+    void emailNullException(){
+        assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent("1", null, name) );
+    }
+    @Test
+    void allNull(){
+        assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent(null, null, null) );
+    }
+
     @Test
     void invalidEmailException(){
         assertThrows(IllegalArgumentException.class, () -> StudentFactory.createStudent("1", invalidEmail, name) );

@@ -12,9 +12,9 @@ import za.ac.cput.util.Helper;
 public class StudentFactory {
 
     public static Student createStudent(String studentId, String email, Name name){
-       if(Helper.stringIsNull(studentId) || Helper.nameIsNull(name)) //check if string and name is null
-           throw new IllegalArgumentException("ID or Name is empty");
-       if(!Helper.emailValid(email))
+       if(Helper.stringIsNull(studentId) || Helper.stringIsNull(email) || Helper.nameIsNull(name)) //check if string and name is null
+           throw new IllegalArgumentException("ID, Email and Name cannot be empty or null");
+       if(!Helper.emailValid(email)) //if email is not valid, throw exception
            throw new IllegalArgumentException("Invalid Email!");
 
        return new Student.Builder()
