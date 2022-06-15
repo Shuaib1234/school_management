@@ -2,6 +2,7 @@ package za.ac.cput.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.validator.routines.EmailValidator;
+import za.ac.cput.domain.Country;
 import za.ac.cput.domain.Name;
 
 public class Helper {
@@ -28,6 +29,10 @@ public class Helper {
     public static void checkStringParam(String paramName, String paramValue ){
         if (isEmptyOrNull(paramValue))
             throw new IllegalArgumentException(String.format("The value is Invalid for param:%s", paramName));
+    }
+
+    public static boolean countryIsNull(Country country){
+        return country == null;
     }
 }
 
