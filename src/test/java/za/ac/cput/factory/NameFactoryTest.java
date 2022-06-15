@@ -21,6 +21,14 @@ class NameFactoryTest {
     System.out.println();
 }
 @Test
+//Test to create middleName with empty string
+public void createNameWithMissingValues(){
+  Name name= NameFactory.createName("Demi","","Farquhar");
+  assertNotNull(name);
+  System.out.println(name);
+    System.out.println();
+}
+@Test
 //When middleName is null then it is replaced with empty string
     public void createNameWithNull(){
     Name name= NameFactory.createName("Demi",null,"Farquhar");
