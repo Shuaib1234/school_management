@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Country;
 
 @Repository
-public interface CountryRepository extends JpaRepository<Country,String> {
+public interface ICountryRepository extends JpaRepository<Country,String> {
 
 }
