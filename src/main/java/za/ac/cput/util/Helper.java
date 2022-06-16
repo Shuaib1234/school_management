@@ -2,8 +2,10 @@ package za.ac.cput.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.validator.routines.EmailValidator;
+import za.ac.cput.domain.City;
 import za.ac.cput.domain.Country;
 import za.ac.cput.domain.Name;
+import za.ac.cput.domain.Address;
 
 public class Helper {
 
@@ -13,6 +15,11 @@ public class Helper {
 
     public static boolean nameIsNull(Name name){
         return name == null;
+    }
+
+    public static boolean addressIsNull(Address address)
+    {
+        return address == null;
     }
 
     public static boolean emailValid(String email){
@@ -34,5 +41,6 @@ public class Helper {
     public static boolean countryIsNull(Country country){
         return country == null;
     }
+
 }
 
