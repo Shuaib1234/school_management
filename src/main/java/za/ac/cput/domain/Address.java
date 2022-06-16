@@ -32,6 +32,10 @@ public class Address {
         this.postalCode=builder.postalCode;
     }
 
+    protected Address() {
+
+    }
+
 
     //getters
     public String getUnitNumber() {
