@@ -13,6 +13,8 @@ public class EmployeeAddressFactory {
 
 
  public static EmployeeAddress createEmployeeAddress( String staffId, Address address){
+        Helper.checkStringParam("EmployeeAddress ", staffId);
+        Helper.addressIsNull(address);
 
     return new EmployeeAddress.Builder().setStaffId(staffId).setAddress(address).build();
 

@@ -17,15 +17,10 @@ import java.util.Objects;
 public class EmployeeAddress {
 
     @NotNull
-    @Id
     private String staffId;
-
-    @NotNull
-    @Embedded
     private Address address;
 
-    protected EmployeeAddress(){
-    }
+
 
     private EmployeeAddress(Builder builder){
       this.staffId= builder.staffId;
