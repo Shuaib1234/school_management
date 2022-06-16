@@ -4,6 +4,7 @@ This is term two group assignment
 Author: Sinovuyo Mlanjeni (219220387)
  */
 
+import za.ac.cput.domain.Address;
 import za.ac.cput.domain.StudentAddress;
 import za.ac.cput.util.Helper;
 
