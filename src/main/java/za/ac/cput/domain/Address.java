@@ -32,6 +32,10 @@ public class Address {
         this.postalCode=builder.postalCode;
     }
 
+    protected Address() {
+
+    }
+
 
     //getters
     public String getUnitNumber() {
@@ -92,33 +96,33 @@ public class Address {
         private int postalCode;
         private City city;
 
-        public Builder unitNumber(String unitNumber) {
-            this.unitNumber=unitNumber;
+        public Builder setUnitNumber(String unitNumber) {
+            this.unitNumber = unitNumber;
             return this;
         }
 
-        public Builder complexName(String complexName) {
-            this.complexName=complexName;
+        public Builder setComplexName(String complexName) {
+            this.complexName = complexName;
             return this;
         }
 
-        public Builder streetNumber(String streetNumber) {
-            this.streetNumber=streetNumber;
+        public Builder setStreetNumber(String streetNumber) {
+            this.streetNumber = streetNumber;
             return this;
         }
 
-        public Builder streetName(String streetName) {
-            this.streetName=streetName;
+        public Builder setStreetName(String streetName) {
+            this.streetName = streetName;
             return this;
         }
 
-        public Builder postalCode(int postalCode) {
-            this.postalCode=postalCode;
+        public Builder setPostalCode(int postalCode) {
+            this.postalCode = postalCode;
             return this;
         }
 
-        public Builder city(City city) {
-            this.city=city;
+        public Builder setCity(City city) {
+            this.city = city;
             return this;
         }
 

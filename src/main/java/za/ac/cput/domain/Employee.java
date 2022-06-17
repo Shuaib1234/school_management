@@ -7,6 +7,7 @@ Author: Shuaib Allie (217148867)
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.persistence.Embedded;
 
 
 @Entity
@@ -20,6 +21,7 @@ public class Employee
     @NotNull
     private String email;
 
+    @Embedded
     @NotNull
     private Name name;
 
