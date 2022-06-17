@@ -4,6 +4,7 @@ package za.ac.cput.service.impl;
 Author: Shuaib Allie (217148867)
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.City;
 import za.ac.cput.repository.CityRepository;
@@ -16,7 +17,7 @@ import java.util.Optional;
 public class CityServiceImpl implements CityService {
 
     private final CityRepository cRepository;
-
+    @Autowired
     public CityServiceImpl(CityRepository cRepository){
         this.cRepository=cRepository;
     }

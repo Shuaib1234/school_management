@@ -7,8 +7,10 @@ Date: 11 June 2022
 
 package za.ac.cput.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
@@ -21,7 +23,8 @@ public class Address {
     private String streetName;
     private int postalCode;
     @NotNull
-    @Embedded private City city;
+    @ManyToOne(targetEntity = City.class, cascade = CascadeType.ALL)
+    private City city;
 
     //constructors
     private Address(Builder builder){
@@ -60,6 +63,30 @@ public class Address {
 
     public City getCity() {
         return city;
+    }
+
+    public void setUnitNumber(String unitNumber) {
+        this.unitNumber = unitNumber;
+    }
+
+    public void setComplexName(String complexName) {
+        this.complexName = complexName;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
     }
 
     //toString and hashcode

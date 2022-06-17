@@ -17,6 +17,7 @@ import java.util.Objects;
 public class EmployeeAddress {
 
     @NotNull
+    @Id
     private String staffId;
     private Address address;
 
@@ -25,6 +26,10 @@ public class EmployeeAddress {
     private EmployeeAddress(Builder builder){
       this.staffId= builder.staffId;
       this.address= builder.address;
+
+    }
+
+    protected EmployeeAddress() {
 
     }
 

@@ -5,6 +5,7 @@ Author: Blaine Simpson
 Student Nr: 218020171
  */
 
+import org.springframework.beans.factory.annotation.Autowired;
 import za.ac.cput.domain.EmployeeAddress;
 import za.ac.cput.repository.EmployeeAddressRepository;
 import za.ac.cput.service.EmployeeAddressService;
@@ -17,7 +18,7 @@ public class EmployeeAddressServiceImpl implements EmployeeAddressService{
 
 
     private final EmployeeAddressRepository eaRepository;
-
+    @Autowired
     public EmployeeAddressServiceImpl(EmployeeAddressRepository eaRepository) { this.eaRepository = eaRepository; }
 
 

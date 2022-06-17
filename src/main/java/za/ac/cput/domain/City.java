@@ -4,8 +4,10 @@ package za.ac.cput.domain;
 Author: Shuaib Allie (217148867)
  */
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
@@ -18,6 +20,7 @@ public class City {
     private String name;
 
     @NotNull
+    @ManyToOne(targetEntity = Country.class, cascade = CascadeType.ALL)
     private Country country;
 
 

@@ -1,3 +1,9 @@
+/*
+StudentRepository.java
+Repository interface for student
+Author: Ali Mohamed (219113505)
+Date: 15 June 2022
+ */
 package za.ac.cput.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
