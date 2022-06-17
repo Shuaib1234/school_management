@@ -1,8 +1,8 @@
 package za.ac.cput.factory;
-/*
-This is term two group assignment
-Author: Sinovuyo Mlanjeni (219220387)
+/*ADP 3 Assignment 2
+Author : Sinovuyo Mlanjeni(219220387)
  */
+
 
 import za.ac.cput.domain.Address;
 import za.ac.cput.domain.StudentAddress;
