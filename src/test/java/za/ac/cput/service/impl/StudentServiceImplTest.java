@@ -14,7 +14,7 @@ class StudentServiceImplTest {
 
     @Autowired
     private StudentServiceImpl service;
-    private final Name name = NameFactory.createName("a", "b", "c");
+    private final Name name = NameFactory.createName("Ali", "", "Mohamed");
     private final Student student = StudentFactory.createStudent("Ali", "219113505@mycput.ac.za", name);
 
     @Test
