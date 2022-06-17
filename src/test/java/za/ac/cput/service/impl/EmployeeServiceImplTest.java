@@ -1,5 +1,9 @@
 package za.ac.cput.service.impl;
 
+/*
+Author: Shuaib Allie (217148867)
+ */
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,7 +12,7 @@ import za.ac.cput.domain.Employee;
 import za.ac.cput.factory.NameFactory;
 import za.ac.cput.factory.EmployeeFactory;
 
-
+import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 public class EmployeeServiceImplTest {
 
