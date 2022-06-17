@@ -1,5 +1,11 @@
+/* StudentServiceImpl.java
+ Implementation for student service
+ Author: Ali Mohamed (219113505)
+ Date: 15 June 2022
+*/
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Student;
 import za.ac.cput.repository.StudentRepository;
@@ -10,8 +16,10 @@ import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService {
+
     private final StudentRepository repository;
 
+    @Autowired
     public StudentServiceImpl(StudentRepository repository){
         this.repository = repository;
     }
@@ -22,9 +30,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Optional<Student> findById(String s) {
-        //return Optional.empty();
-        return this.repository.findById(s);
+    public Optional<Student> findById(String id) {
+        return this.repository.findById(id);
     }
 
     @Override
